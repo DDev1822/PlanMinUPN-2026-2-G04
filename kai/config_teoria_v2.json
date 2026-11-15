@@ -5,7 +5,12 @@
   "proyecto": "Cerro Rojo",
   "dataset": "DS04",
   "release": "EXP03",
-  "alcance": "TEORIA_CONCEPTUAL_SIN_PRODUCTOS",
+  "alcance": "TEORIA_Y_APLICACION_IMP008",
   "ruta_inicial": "kai/ruta_teoria_v2.json",
-  "misiones": "kai/misiones_teoria_v2.json"
+  "misiones": "kai/misiones_teoria_v2.json",
+  "controlador_activo": "kai/recorrido_g04.py",
+  "registro": "kai/registro_teoria_v2.py",
+  "ficha_e1": "kai/ficha_individual.py",
+  "aplicacion": "kai/aplicacion_g04.py",
+  "productos": "outputs/g04_products.json"
 }

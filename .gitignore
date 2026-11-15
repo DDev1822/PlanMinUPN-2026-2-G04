@@ -28,3 +28,10 @@ Thumbs.db
 .kai_local/
 /.kai_solicitud_recorrido_academico.json
 /.kai_solicitud_teoria_v2.json
+
+# Estado local IMP-008 completo
+/.kai_solicitud_recorrido_g04.json
+/.kai_solicitud_ficha_g04.json
+*.inspect.ndjson
+*.pending
+outputs/**/.pending_*/

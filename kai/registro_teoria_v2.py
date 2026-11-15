@@ -279,8 +279,8 @@ def procesar(s):
             if any(info['estados'][a['id']] != 'DEMOSTRADO' for a in ACTIVIDADES if a['etapa'] in previas):
                 raise ValueError('Primero debe completar la comprensión de la etapa anterior')
             base = s.get('base', 'TEORIA_G04')
-            if etapa == 'S12' and base != 'EJEMPLO_CONCEPTUAL_SIN_PRODUCTO':
-                raise ValueError('S12 teórica usa solo un ejemplo conceptual; no acredita un producto grupal')
+            if etapa == 'S12' and base != 'G04_S11_VALIDADO':
+                raise ValueError('S12 requiere el modelo S11 validado del mismo grupo')
             if etapa != 'S12' and base != 'TEORIA_G04':
                 raise ValueError('Base conceptual no permitida para esta etapa')
             previo = conn.execute('SELECT base FROM inicios_v2 WHERE route_id=? AND '

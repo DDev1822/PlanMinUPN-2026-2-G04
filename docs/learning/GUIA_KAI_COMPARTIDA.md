@@ -1,29 +1,27 @@
-# Kai Planeamiento · recorrido teórico G04
+# Kai Planeamiento · G04 · Cerro Rojo
 
 ![DrillStone](../assets/L1.png)
 
-**Proyecto:** Cerro Rojo. **Datos publicados:** DS04/EXP03. **Alcance de esta rama:** E1 → S11 → S12 como comprensión conceptual con registro local por alias. Las actividades se identifican en `kai/ruta_teoria_v2.json` y `kai/misiones_teoria_v2.json`.
+**Release:** DS04/EXP03, datos sintéticos. **Malla:** 20 × 20 × 10 m; 41,412 celdas. **Sondajes:** 35. **Compósitos:** 5332.
 
-Esta guía no entrega cifras del modelo de Santa Elena. En G04 no se ha integrado ni validado una corrida cuantitativa S11/S12 bajo IMP-008. El registro de teoría no genera leyes, densidades, tonelajes, candidatos, escenarios, recursos o reservas del grupo. Tampoco genera la ficha E1 de 21 datos, la aplicación de 26 datos ni el ZIP individual completo; esos instrumentos requieren la adaptación y comprobación de los productos propios de G04.
+El recorrido tiene 30 actividades: 8 de E1, 16 de S11 y 6 de S12. Kai explica, pregunta una decisión y su razón, espera la respuesta, contrasta la evidencia y solo entonces avanza. El tutor valora el contenido de la respuesta; el registro controla orden y persistencia, no aprueba semánticamente.
 
-## Secuencia del tutor
+## Datos y modelos propios
 
-Kai explica el concepto, indica la fuente realmente disponible, plantea **una decisión y su razón por turno**, espera la respuesta, valora lo que el estudiante dijo y registra `DEMOSTRADO` solo con razonamiento propio. Un error o «no sé» recibe una pista y otra oportunidad. `registrar` controla estructura y orden, pero la valoración semántica corresponde al tutor; el Excel es una vista de SQLite. El alias es pseudónimo local, no autenticación institucional.
+- E1: `data/raw/`, `data/processed/`, la ficha de 21 observaciones y el visor M01B.
+- M01B: Malla 20 × 20 × 10 m; S11 usa la asignación preliminar conservadora con radio de 20 m.
+- S11: IDW² de Cu/Mo/Au y densidad bajo las reglas PT-01, con vecinos, radios, litología preliminar y faltantes explícitos. El modelo de bloques completo y el manifiesto se encuentran bajo `outputs/g04_s11/`.
+- S12: clasificación académica y escenarios A/B vinculados a la generación S11 del mismo grupo. No hay pit, secuencia física ni reservas profesionales. Productos bajo `outputs/g04_s12/`.
+- Aplicación: 13 observaciones S11 y 13 S12, conciliadas con los productos verificados. Los estados y respuestas viven en `.kai_local/` y están excluidos de Git.
 
-E1 comprende exploración, logueo, collar, survey, assay, compositación, geometría y modelo preliminar. Para hechos propios de G04, consultar `data/raw/release_manifest.json`, `docs/DATA.md` y los productos M01 del repositorio. Si aún falta un modelo preliminar, enseñarlo como concepto sin atribuirle resultados al grupo.
+## Operación
 
-S11 contiene diez unidades de métodos y seis de aplicación conceptual. Vecino más cercano toma una observación elegible; IDW pondera varias por cercanía; un variograma estudia continuidad en distancia y dirección; kriging necesita continuidad y supuestos de media defendibles; cokriging exige relación espacial con una variable secundaria; la simulación condicional explora variabilidad entre realizaciones. Ninguno de esos nombres acredita una estimación propia. La elección del método y sus parámetros para G04 requieren la decisión académica y datos del grupo; el tutor no cambia reglas por conversación.
+El controlador `kai/recorrido_g04.py` procesa solicitudes JSON en `.kai_solicitud_recorrido_g04.json` con el comando constante `py -3 kai/recorrido_g04.py procesar-pendiente`. Consulta `estado` para obtener la actividad o campo pendiente. La ficha E1 usa `estado_ficha_e1` / `responder_ficha_e1`; la aplicación usa `estado_aplicacion` / `responder_aplicacion`; `entregar_individual` exige comprensión, 47 observaciones y productos grupales vigentes.
 
-En una futura cuantificación, ley y densidad necesitan soporte propio, el tonelaje requiere volumen de roca y densidad compatibles, los faltantes quedan visibles y un radio de búsqueda más amplio no prueba calidad. Una imagen 3D no reemplaza el CSV completo ni la validación minera.
+La secuencia pedagógica es **comprender → predecir → ejecutar → interpretar → validar → avanzar**. Los ejemplos teóricos de métodos no sustituyen la lectura de los modelos propios. Las respuestas reales y la aceptación conversacional mediante Copilot/PyCharm requieren comprobación humana separada.
 
-S12 usa **solo un microcaso conceptual identificado** hasta contar con S11 propio verificado. Un candidato a mineral necesita ley y tonelaje respaldados y criterios explícitos; sin clasificación no significa desmonte. Mina y planta tienen capacidades diferentes; tiempos de ciclo afectan flota; CAPEX y OPEX describen conceptos distintos; accesos, precedencias y estabilidad condicionan extracción. Comparar A/B no produce por sí solo un plan físico ni reservas profesionales.
+## Límites
 
-## Fuentes y límites de G04
-
-- Release: `data/raw/release_manifest.json` (DS04/EXP03).
-- Datos M01: `data/raw/`, `data/processed/` y `outputs/` existentes en el repositorio; revisar su estado antes de citarlos.
-- No se publica `.kai_local`, SQLite, Excel individual ni conversaciones.
-- Para S11/S12 propios faltan integración científica, verificación por corrida y adaptación de visores e instrumentos de aplicación. No se rellenan campos con números de G05.
-- La aceptación conversacional real en Copilot/PyCharm y la verificación visual interactiva siguen pendientes.
+La topografía y los collars coinciden en las coordenadas locales del release, pero no existe certificación formal de CRS/datum. La asignación litológica es preliminar; cercanía no demuestra continuidad. Los resultados son académicos, con datos sintéticos. Los tonelajes con densidad y los tonelajes con Cu respaldado son poblaciones distintas. Los campos ausentes siguen ausentes.
 
 ![DrillStone · símbolo](../assets/L3.png)

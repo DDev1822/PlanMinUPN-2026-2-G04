@@ -1,6 +1,6 @@
-# Agregar dependencias solamente cuando exista una necesidad real del proyecto.
-# Evitar instalar librerías por conveniencia antes de definir el problema.
-plotly
+plotly>=7.1,<8
 matplotlib
-numpy
+numpy>=2.4,<3
 pandas
+scipy>=1.11,<2
+pytest>=9.1,<10
