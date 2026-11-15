@@ -134,7 +134,7 @@
     "tests/m01/test_topography.py": "f9c9e0a334e5977d19b4a42581d2d43dfe7eea32718386926b7e03aba56142c4",
     "tests/m01/test_validation.py": "a77abf7b8754ac822fc5d3a6a7701466cc3a1fc0e54bc1bca543f77246d498c7",
     "tests/m01/test_validation_plots.py": "2980a5266ff61250b00100531532f7504971d2409ee708a217f68107d6ea9f2c",
-    "tests/m01/test_visualizer.py": "635f85c30a3c8a885056fe7a96f4f706c129cedd7a21a21e3c38f0d5f5e30624",
+    "tests/m01/test_visualizer.py": "8094f328f3b65be30bcb2787f405a5f7d1b8be4f2c3d0bd3b492e757c4434f1b",
     "tests/test_imp008_group.py": "00a9bb56410b48b542c482890c2b4c607ebfea6b4d312995c43d4362a124cb76",
     "tests/test_imp008_quantitative_unit.py": "da6c0c12d12ed0f850285b70b88443de1acbf42a155922998bd4ebb4376ed469",
     "tests/test_kai_teoria_compartida.py": "31b929a6b25733120d35bc9efcb249cf344e68f37c6cfa93216425cee244c252"

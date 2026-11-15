@@ -132,7 +132,11 @@ class VisualizerTests(unittest.TestCase):
             self.assertIn("Plotly.newPlot", content)
             self.assertIn("M01 Exploration 3D", content)
             self.assertIn("Sistema cartesiano local", content)
-            self.assertIn(r"Topograf\u00eda: no disponible", content)
+            self.assertTrue(
+                "Topografía: no disponible" in content
+                or r"Topograf\u00eda: no disponible" in content,
+                "El visor debe conservar el aviso de topografía sin depender de la codificación de Plotly",
+            )
 
     def test_empty_assay_keeps_lithology_view_available(self):
         empty_assay = CsvTable(self.assay.headers, ())
