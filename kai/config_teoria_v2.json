@@ -10,7 +10,7 @@
   "misiones": "kai/misiones_teoria_v2.json",
   "controlador_activo": "kai/recorrido_g04.py",
   "registro": "kai/registro_teoria_v2.py",
-  "ficha_e1": "kai/ficha_individual.py",
+  "ficha_e1": "kai/ficha_individual_v2.py",
   "aplicacion": "kai/aplicacion_g04.py",
   "productos": "outputs/g04_products.json"
 }

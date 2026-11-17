@@ -93,7 +93,7 @@
       "id": "E1.08",
       "etapa": "E1",
       "titulo": "Modelo preliminar y cierre",
-      "explicacion": "Un modelo geológico preliminar organiza geometría y observaciones según su soporte. En este grupo, su existencia y estado se comprueban en los productos M01 propios; todavía no se dispone de una corrida S11/S12 verificada bajo IMP-008.",
+      "explicacion": "Un modelo geológico preliminar organiza geometría y observaciones según su soporte. En G04, el visor M01B permite examinar esa primera representación. También existen productos académicos S11 y S12 verificados, que estudiarás en etapas posteriores; su existencia no convierte por sí sola el modelo preliminar en una decisión de extracción.",
       "pregunta": "Si alguien propone decidir la extracción solo con un modelo geológico preliminar, ¿qué le dirías y por qué?",
       "criterio": "reconoce su utilidad inicial y explica una razón suficiente por la que faltan propiedades respaldadas y evaluación para decidir extracción. No se exige recitar todas las limitaciones ni diseñar todavía un método de estimación.",
       "pista": "Ayudar a separar la forma o categoría que muestra el visor de la información que necesitaría esa decisión. Si ya aportó una razón válida, cerrar sin otra comprobación automática.",

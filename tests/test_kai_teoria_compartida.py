@@ -30,7 +30,7 @@ def test_identidad_y_contrato(private_data):
     assert state['entrega_final_lista'] is False
     assert [sum(a['etapa'] == k for a in theory.ACTIVIDADES) for k in ('E1', 'S11', 'S12')] == [8, 16, 6]
     assert all(state['productos_grupales'][s]['status'] == 'VALIDATED' for s in ('S11', 'S12'))
-    assert state['ficha_e1']['total'] == 21
+    assert state['ficha_e1']['total_fields'] == 21
     assert state['aplicacion_individual_v3']['total'] == 26
     assert all('G05' not in json.dumps(a, ensure_ascii=False) and 'Santa Elena' not in json.dumps(a, ensure_ascii=False) for a in theory.ACTIVIDADES)
 
